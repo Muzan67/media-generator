@@ -4,14 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superhero Generator</title>
-</head>
-<body>
-    <div>hello</div>
-
-    <div> how are you</div>
-
-
     
+    <!-- CSS UI Framework: https://purecss.io/ - needs both of these -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Superhero Generator: Marvel Edition</title>
+</head>
+<header>
+
+</header>
+<body>
+    <main>
+        <!-- search box -->
+        <div id="search-form">
+            <h2>Type in a Marvel Superhero:</h2>
+            <form id="superhero-search-box">
+                <label class="form-label" for="superhero">Superhero:</label>
+                <input name="superhero" id="superhero" type="text" placeholder ="Spiderman, Thor, etc." autofocus="true" class="form-input" />
+                <button type="submit" class="btn" id="submit-button">Summon Superhero</button>
+              </form> 
+        <!-- image and caption -->
+        <div id="image-box">
+            <img id="superhero-image" src=""></img>
+            <p id="image-caption"></p>
+        </div>
+        <!-- Info card here -->
+        <div id="superhero-info-card">
+            <h1 id="superhero-name">Superhero Name</h1>
+            <p id="identity-p">Secret Identity or Alter Ego: </p><span id="identity-text"></span></p>
+            <p id="bio-p">Bio: </p><span id="bio-text"></span></p>
+            <p id="appearence-p">First appearence: </p><span id="appearence-text"></span></p>
+        </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
