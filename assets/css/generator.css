@@ -1,0 +1,57 @@
+/* Generator Style Sheet */
+/* Base Style could change something if we need */
+body {
+    color: #526066;
+  }
+  
+  h2,
+  h3 {
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  p {
+    line-height: 1.6em;
+  }
+  
+  /* overall layout of the page  */
+
+  .l-content {
+    margin: 0 auto;
+  }
+  
+  .l-box {
+    padding: 0.5em 2em;
+  }
+  
+  /* Menu Bar (we could probably insert media query to the bottom @media...etc) */
+  .pure-menu {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pure-menu-link {
+    padding: 0.5em 0.7em;
+  }
+
+
+/* Footer Section Lies Here */
+
+  .footer {
+    background: black;
+  }
+  .footer h3 {
+    color: #ddd;
+    text-align: right;
+  }
+
+span,
+.footer a {
+    font-size: 50px;
+    font-weight: 700;
+     align-content: left;
+     font-size: 15px;
+     margin-top: auto;
+     margin: auto;
+     padding: auto;
+  }
