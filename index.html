@@ -47,12 +47,12 @@
             <h2>Type In The Name of The Movie:</h2>
             <form id="superhero-search-box">
                 <label class="form-label" for="superhero">Movie Title:</label>
-                <input name="superhero" id="superhero" type="text" placeholder ="Spiderman Movie... etc." autofocus="true" class="form-input" />
+                <input name="movie" id="movie" type="text" placeholder ="Spiderman Movie... etc." autofocus="true" class="form-input" aria-label="movie"/>
                 <button type="submit" class="btn" id="submit-button">Search</button>
               </form> 
             <!-- image and caption -->
         <div id="image-box">
-            <img id="superhero-image" src="" alt="movie photo appears here"></img>
+            <img id="movie-image" src="" alt="movie photo appears here"></img>
             <p id="image-caption"></p>
         </div>
 
@@ -64,10 +64,10 @@
   
 
         <!-- Info card here -->
-        <div id="superhero-info-card">
-            <h1 id="superhero-name">Superhero Name</h1>
-            <p id="identity-p">Secret Identity or Alter Ego: </p><span id="identity-text"></span></p>
-            <p id="bio-p">Bio: </p><span id="bio-text"></span></p>
+        <div id="movie-info-card">
+            <h1 id="movie-name">Movie Name</h1>
+            <p id="type-p">type of movie, series, episode</p><span id="identity-text"></span></p>
+            <p id="plot-p">Plot</p><span id="plot-text"></span></p>
             <p id="appearence-p">First appearence: </p><span id="appearence-text"></span></p>
         </div>
     </main>
