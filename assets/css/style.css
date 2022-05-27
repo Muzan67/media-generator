@@ -41,7 +41,7 @@ body {
   /* Banner Section Style 
   (Maybe we could add an image here for aesthetic)  */
   .banner {
-    background-color: darkred;
+    background-color: darkblue;
     text-align: center;
     background-size: cover;
     height: 200px;
@@ -75,14 +75,14 @@ body {
     background-size:cover;
     text-align: center; 
     color: black; 
-    background-color: hsla(0, 85%, 35%, 0.3);
+    background-color: hsla(242, 93%, 16%, 0.3);
     display: flex;
     justify-content: center;
   align-items: center;
   }
 
   .form-label,
-  #superhero-image {
+  #movie-image {
     letter-spacing: 0.25em;
     font-weight: 800;
   }
@@ -111,4 +111,23 @@ body {
     font-weight: 500;
 }
 
+/* Media Query responsive to mobile phone */
 
+@media screen and  (max-width:550px) {
+  .pure-menu{
+      width: auto;
+  }
+  .banner{
+      width: auto;
+  }
+  .my-container {
+    width: auto;
+  }
+  .form-label {
+    width: auto;
+  }
+  .footer {
+    width: auto;
+    height: auto;
+  }
+}
