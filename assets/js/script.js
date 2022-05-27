@@ -18,7 +18,7 @@ var formSubmitMovie = function(event) {
  }
 
  var searchMovies = function(movie) {
-    var movieSearchApi = "http://www.omdbapi.com/?apikey=15745547&type=movie&s=" + movie;
+    var movieSearchApi = "https://www.omdbapi.com/?apikey=15745547&type=movie&s=" + movie;
 
     fetch(movieSearchApi).then(function(response) {
         //if request was successful:
@@ -38,7 +38,7 @@ var formSubmitMovie = function(event) {
                     //link
                     var moviePosterLinkEl = document.createElement("a");
 
-                    moviePosterImageEl.setAttribute("href", "http://www.omdbapi.com/?apikey=15745547&type=movie&t=" + movie);
+                    moviePosterImageEl.setAttribute("href", "https://www.omdbapi.com/?apikey=15745547&type=movie&t=" + movie);
 
                     //appends movies to screen.
                     //This isn't working right - it should make the image the link!
@@ -63,7 +63,7 @@ var getMovieInfo = function () {
 
 
 
-    var movieTitleApi = "http://www.omdbapi.com/?apikey=15745547&type=movie&t=" + chosenMovie;
+    var movieTitleApi = "https://www.omdbapi.com/?apikey=15745547&type=movie&t=" + chosenMovie;
 
 
     fetch(movieTitleApi).then(function(response) {
