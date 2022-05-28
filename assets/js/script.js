@@ -38,10 +38,13 @@ var formSubmitMovie = function(event) {
                     //link
                     var moviePosterLinkEl = document.createElement("a");
 
-                    moviePosterImageEl.setAttribute("href", "https://www.omdbapi.com/?apikey=15745547&type=movie&t=" + movie);
+                    var thisMovieID = i;
+
+
+                    moviePosterLinkEl.setAttribute("href", "./movie-info.html?thisIMDBID=" + data.Search[thisMovieID].imdbID);
 
                     //appends movies to screen.
-                    //This isn't working right - it should make the image the link!
+                  
                     moviePosterLinkEl.appendChild(moviePosterImageEl)
                     movieListEl.appendChild(moviePosterLinkEl); 
                     
@@ -56,30 +59,6 @@ var formSubmitMovie = function(event) {
 }
 
 
-
-var getMovieInfo = function () {
- 
-    //needs to come from what the user clicked on
-
-
-
-    var movieTitleApi = "https://www.omdbapi.com/?apikey=15745547&type=movie&t=" + chosenMovie;
-
-
-    fetch(movieTitleApi).then(function(response) {
-        //if request was successful:
-        if(response.ok) {
-            response.json().then(function(data) {
-                //pass response data to DOM function
-                console.log(data)
-            });
-        }
-        else {
-            //direct to homepage if not successful
-        //  document.location.replace("./index.html");
-        }
-    });
-}
 
 
 submitButtonEl.addEventListener("click", formSubmitMovie);

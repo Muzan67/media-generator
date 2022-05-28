@@ -92,7 +92,7 @@ body {
   .footer {
     background: black;
     width: 98%;
-    height: 200px; 
+    height: auto; 
     margin: 0px auto; 
     margin-left: auto;
     margin-right: auto;
@@ -110,6 +110,16 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
+
+/* These are for the movie-results page: */
+ #movie-details {
+     font-style: bold;
+ }
+
+ #movie-details span {
+     font-style: normal;
+ }
+
 
 /* Media Query responsive to mobile phone */
 
@@ -130,4 +140,8 @@ body {
     width: auto;
     height: auto;
   }
+
+  p br {
+    display: none;
+}
 }
