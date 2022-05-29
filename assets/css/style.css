@@ -121,6 +121,12 @@ body {
  }
 
 
+ /* These are for the favorites page */
+ #movie-box {
+     border: 10px solid black;
+ }
+
+
 /* Media Query responsive to mobile phone */
 
 @media screen and  (max-width:550px) {
