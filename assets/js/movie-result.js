@@ -8,8 +8,14 @@ var movieWriterEl = document.querySelector("#movie-writer");
 var movieStarsEl = document.querySelector("#movie-stars");
 var moviePlotEl = document.querySelector("#movie-plot");
 var movieAwardsEl = document.querySelector("#movie-awards");
+var favoritesButtonEl = document.querySelector("#add-to-favorites");
 
-var thisIMDBID= null;
+var movieID = null;
+var inFavorites = false;
+
+//favorites
+var favoritesArr = []; 
+console.log(favoritesArr);
 
 //needs to come from what the user clicked on
     //var chosenMovie = 
@@ -19,7 +25,7 @@ var chosenMovieTest = "Titanic"
 var getMovieID = function() {
     //grab repo name from url query string
     var queryString = document.location.search;
-    var movieID = queryString.split("=")[1];
+    movieID = queryString.split("=")[1];
 
     console.log(movieID);
         getMovieInfo(movieID);
@@ -40,10 +46,11 @@ var getMovieInfo = function (movieID) {
                 posterImgEl.setAttribute("alt", data.Title + "poster");
 
                 movieTitleEl.textContent= data.Title;
+                movieTitleText = data.Title
                 movieReleaseEl.textContent = data.Released;
                 movieDirectorEl.textContent = data.Director;
                 movieWriterEl.textContent = data.Writer;
-                movieStarsEl.textContent = data.Starring;
+                movieStarsEl.textContent = data.Actors;
                 moviePlotEl.textContent = data.Plot;
                 movieAwardsEl.textContent = data.Awards;
             });
@@ -55,4 +62,46 @@ var getMovieInfo = function (movieID) {
     });
 }
 
+
+var saveToFavorites = function () {
+    //adds movie ID to array
+    favoritesArr.push(movieID);
+    console.log(favoritesArr);
+    //changes button text
+    favoritesButtonEl.textContent="Added To favorites";
+    //saves array in local storage
+    localStorage.setItem("favoritesArr", JSON.stringify(favoritesArr)); 
+}
+
+var checkIfFavorited = function () {
+    favoritesArr = JSON.parse(localStorage.getItem("favoritesArr"));
+    //if favorites array is empty, save item to favorites
+    if (favoritesArr === null) {
+        console.log("empty array")
+        favoritesArr = [];
+        saveToFavorites();
+    } else {
+        //checks to make sure item isn't already in array
+        for (var i = 0; i < favoritesArr.length; i++){
+            //if the id is  equal to what's in the array,
+            if (movieID === favoritesArr[i]){
+                inFavorites = true;
+                favoritesButtonEl.textContent="Already In Favorites";
+                
+            } 
+        }
+        //if, after looping through all items in array, the ID is not found in the favorites
+        if (!inFavorites) {
+            saveToFavorites();
+        }
+        
+    }
+    //disables buttons
+    favoritesButtonEl.disabled = true;
+}
+
+
+
 getMovieID();
+
+favoritesButtonEl.addEventListener("click", checkIfFavorited);
