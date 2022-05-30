@@ -51,6 +51,17 @@ p {
   display: table;
 }
 
+.bg-image {
+  /* Background: linear-gradient(rgba(0,0,0,0,.6), rgba(0,0,0,0.3)), url(./assets/images/bg.jpeg); */
+  background-image: url(./assets/images/bg.jpeg);
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .banner-head {
   display: table-cell;
   vertical-align: middle;
@@ -134,3 +145,6 @@ s
     height: auto;
   }
 }
+
+/* Thanos Gauntlet */ 
+cursor: url('/YOUR_PATH/cursor.cur'), auto;
