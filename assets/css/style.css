@@ -31,7 +31,8 @@ body {
   
   /* Menu Bar (we could probably insert media query to the bottom @media...etc) */
   .pure-menu {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #91a6e9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
   
   .pure-menu-link {
@@ -106,14 +107,29 @@ body {
 #meet-our-team {
     text-align: center;
     text-decoration: none;
-    color: aliceblue;
     font-size: 20px;
     font-weight: 500;
 }
 
 /* These are for the movie-results page: */
- #movie-details {
+#poster-box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23%;
+} 
+#movie-details {
      font-style: bold;
+    font-size: large;
+    font-weight: 500;
+    align-content: flex-start;
+ }
+
+ #movie-details h1 {
+   text-align: center;
+   font-size: large;
+   font-weight: 500;
+
  }
 
  #movie-details span {
