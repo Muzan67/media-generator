@@ -51,7 +51,7 @@ p {
   display: table;
 }
 
-.bg-image {
+bg-image 
   /* Background: linear-gradient(rgba(0,0,0,0,.6), rgba(0,0,0,0.3)), url(./assets/images/bg.jpeg); */
   background-image: url(./assets/images/bg.jpeg);
   background-size: cover;
@@ -60,7 +60,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
 .banner-head {
   display: table-cell;
@@ -116,6 +115,7 @@ s
   margin-right: auto;
   display: flexbox;
 }
+
 .footer h3 {
   color: #ddd;
   text-align: center;

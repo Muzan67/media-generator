@@ -49,15 +49,17 @@ body {
     width: 100%;
     margin-bottom: 3em;
     display: table;
+    background-image: url(/assets/images/header.webp);
+    background-size:contain;
   }
   
   .banner-head {
     display: table-cell;
     vertical-align: middle;
     margin-bottom: 0;
-    font-size: 2em;
-    color: white;
-    font-weight: 500;
+    font-size: 2rem;
+    color: #FFD700;
+    font-weight: bold;
     text-shadow: 0 1px 1px black;
   }
 
