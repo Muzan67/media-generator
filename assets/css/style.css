@@ -32,7 +32,7 @@ body {
   /* Menu Bar (we could probably insert media query to the bottom @media...etc) */
   .pure-menu {
     background-color: #91a6e9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
   
   .pure-menu-link {
