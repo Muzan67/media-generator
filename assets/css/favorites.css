@@ -6,7 +6,8 @@ a {
 } 
 body {
   color: #526066;
-}
+  background-image: url(/assets/images/coupon.jpeg);
+ }
 
 h2,
 h3 {
@@ -27,10 +28,19 @@ p {
 
 .l-box {
   padding: 0.5em 2em;
-}
+  }
 
 /* Menu Bar (we could probably insert media query to the bottom @media...etc) */
 .pure-menu {
+  background-image: url(/assets/images/header.webp);
+  height: 200px;
+  width: 100%;
+  margin-bottom: 3em;
+  display: table;
+  background-size:contain;
+}
+
+.pure-menu-list {
   background-color: #91a6e9;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -48,7 +58,7 @@ p {
   height: 200px;
   width: 100%;
   margin-bottom: 3em;
-  display: table;
+  
 }
 
 .banner-head {
@@ -75,24 +85,33 @@ p {
 .text-box-container {
   background-color: #fff;
 }
-s
-  .text-box-head {
-      color: black;
-      padding-bottom: 0.2em;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 24px;
-      text-align: center;
-  }
 
-  .text-box-subhead {
-      font-weight: normal;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-align: center;
-  }
-  
+s
+.text-box-head {
+  color: black;
+  padding-bottom: 0.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  text-align: center;
+}
+
+.text-box-subhead {
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.movie-box{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: block;
+  flex-basis: 100%;
+}
 
 /* Footer Section Lies Here */
 
