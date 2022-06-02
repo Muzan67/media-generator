@@ -58,8 +58,6 @@ var formSubmitMovie = function(event) {
 }
 
 
-
-
 submitButtonEl.addEventListener("click", formSubmitMovie);
 
 
