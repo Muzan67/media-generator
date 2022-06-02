@@ -66,7 +66,13 @@ var fetchMovieData = async (movieID) => {
                 removeMovieButton.setAttribute("id", movieID);
                 //removeMovieButton.setAttribute("name", "button" + arrayNumber);
                 
-                oneMovieBoxEl.appendChild(moviePosterEl);
+                //creates linklink
+                var moviePosterLinkEl = document.createElement("a");
+                //makes the link and image
+                moviePosterLinkEl.setAttribute("href", "./movie-info.html?thisIMDBID=" + movieID);
+
+                moviePosterLinkEl.appendChild(moviePosterEl)
+                oneMovieBoxEl.appendChild(moviePosterLinkEl);
                 oneMovieBoxEl.appendChild(movieTitleEl);
                 oneMovieBoxEl.appendChild(removeMovieButton);
                 allMoviesBoxEl.appendChild(oneMovieBoxEl)

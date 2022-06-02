@@ -131,17 +131,19 @@ align-items: center;
 /* Footer Section Lies Here */
 
 .footer {
-  background: black;
+  background-color: black;
   width: 98%;
   height: 200px; 
   margin: 0px auto; 
   margin-left: auto;
   margin-right: auto;
   display: flexbox;
+  text-align: center;
+  color: white
 }
 .footer h3 {
   color: #ddd;
-  text-align: left;
+
 }
 
 #meet-our-team {
@@ -149,6 +151,14 @@ align-items: center;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
+}
+
+#names-format li {
+  flex: wrap;
+  text-align: left;
+  align-items: left;
+  list-style: none;
+  padding-left:45%;
 }
 
 /* These are for the movie-results page: */
@@ -286,6 +296,21 @@ border-bottom-color: #f439f4;
   text-align: center;
 }
 
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: orange; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
 
 /* Media Query responsive to mobile phone */
 
@@ -297,6 +322,7 @@ border-bottom-color: #f439f4;
 }
 .banner{
     width: auto;
+    
 }
 .my-container {
   width: auto;
