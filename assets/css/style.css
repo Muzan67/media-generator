@@ -1,5 +1,8 @@
 /* Home Page Style Sheet */
 /* Base Style could change something if we need */
+
+
+
 a {
   text-decoration: none;
   color: #ddd;
@@ -135,40 +138,50 @@ align-items: center;
 }
 
 /* These are for the movie-results page: */
-#poster-box {
+#movie-info {
+  display: flexbox;
+  flex: auto;
+  flex-wrap: wrap;
+  display: block;
+  background-color: black;
+}
 
+#poster-box {
+  position: absolute;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
-max-width: 500cm;
-background-color: black;
 float:left;
-height: auto;
-
+flex: 1 1 auto;
+display: flex;
 
 } 
 #poster-img {
-height: 15cm;
-width: 15cm;
-text-rendering: 200px;
-height: inherit;
-
-
+flex: auto;
+height: 100vh;
+max-width: 200%;
 }
+
 #movie-details {
+  flex: auto;
+  flex-wrap: wrap;
+  
+  position:relative;
+  align-items: flex-start;
+  /* display: flex; */
   font-style: bold;
   font-size: x-large;
   font-weight: 500;
   color: white;
   align-content: flex-start;
-  padding: 200px;
+  padding: 10% 10% 0 50%;
   margin-bottom:  200px;
-  background-color: black;
   height: inherit;
+  
 }
 
 #movie-details h1 {
- text-align: center;
+ padding-right:20% ;
  font-size: x-large;
  font-weight: 500;
  text-decoration: underline red;
@@ -176,10 +189,24 @@ height: inherit;
 
 }
 
-#movie-details span {
-   font-style: normal;
+#movie-details p {
+   font-size:large;
+   font-style: bold;
+   color: yellow;
 }
 
+#movie-details span {
+
+  font-style:normal;
+  color: white;
+}
+
+#gif-box {
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex:wrap;
+}
 
 /* These are for the favorites page */
 

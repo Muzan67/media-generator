@@ -9,7 +9,7 @@ var movieStarsEl = document.querySelector("#movie-stars");
 var moviePlotEl = document.querySelector("#movie-plot");
 var movieAwardsEl = document.querySelector("#movie-awards");
 var favoritesButtonEl = document.querySelector("#add-to-favorites");
-var movieDetailsBox = document.querySelector("#movie-details");
+var movieInfoBox = document.querySelector("#movie-info");
 
 var movieID = null;
 var inFavorites = false;
@@ -114,7 +114,7 @@ var getMovieGifs = function (movieTitle) {
                 console.log(data);
                 //pass response data to DOM function
                 //creates gif box el
-                var gifBoxEl = document.createElement("div");
+                var gifBoxEl = document.querySelector("#gif-box");
                 //loops through data to place the 10 gifs that were requested.
                 //"10" is hard coded in because it's part of the API url, that could be changed easily.
                 for (var i = 0; i < 10; i++){
@@ -124,7 +124,7 @@ var getMovieGifs = function (movieTitle) {
                     gifBoxEl.appendChild(gifImgEl);
 
                 }
-                    movieDetailsBox.appendChild(gifBoxEl);
+                    movieInfoBox.appendChild(gifBoxEl);
             });
         }
         else {
