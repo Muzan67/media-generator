@@ -9,6 +9,7 @@ var movieStarsEl = document.querySelector("#movie-stars");
 var moviePlotEl = document.querySelector("#movie-plot");
 var movieAwardsEl = document.querySelector("#movie-awards");
 var favoritesButtonEl = document.querySelector("#add-to-favorites");
+var movieDetailsBox = document.querySelector("#movie-details");
 
 var movieID = null;
 var inFavorites = false;
@@ -44,6 +45,8 @@ var getMovieInfo = function (movieID) {
                 //pass response data to DOM function
                 posterImgEl.setAttribute("src",data.Poster);
                 posterImgEl.setAttribute("alt", data.Title + "poster");
+
+                getMovieGifs(data.Title);
 
                 movieTitleEl.textContent= data.Title;
                 movieTitleText = data.Title
@@ -99,9 +102,38 @@ var checkIfFavorited = function () {
     //disables buttons
     favoritesButtonEl.disabled = true;
 }
+//adds gifs to the bottom of the movie details div
+var getMovieGifs = function (movieTitle) {
 
+    var giphyApi = "https://api.giphy.com/v1/gifs/search?api_key=8E2MLmad1E3gk5mXH5xLiiNLcpIx3ddf&q=" + movieTitle + "&limit=10&offset=0&rating=pg-13&lang=en";
 
+    fetch(giphyApi).then(function(response) {
+        //if request was successful:
+        if(response.ok) {
+            response.json().then(function(data) {
+                console.log(data);
+                //pass response data to DOM function
+                //creates gif box el
+                var gifBoxEl = document.createElement("div");
+                //loops through data to place the 10 gifs that were requested.
+                //"10" is hard coded in because it's part of the API url, that could be changed easily.
+                for (var i = 0; i < 10; i++){
+                    var gifImgEl = document.createElement("img");
+                    gifImgEl.setAttribute("src",data.data[i].images.original.url);
+                    gifImgEl.setAttribute("alt", "gif: " + data.data[i].title);  
+                    gifBoxEl.appendChild(gifImgEl);
 
+                }
+                    movieDetailsBox.appendChild(gifBoxEl);
+            });
+        }
+        else {
+            
+        }
+    });
+}
+
+//gets the movie id, which leads to displaying the info
 getMovieID();
 
 favoritesButtonEl.addEventListener("click", checkIfFavorited);

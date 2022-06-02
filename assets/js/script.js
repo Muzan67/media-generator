@@ -6,6 +6,8 @@ var movieTitleSearchEl = document.querySelector("#movie-title");
 //search button
 var submitButtonEl = document.querySelector("#submit-button");
 
+var imageCaptionEl = document.querySelector("#image-caption");
+
 //variable for what becomes the movie that the user inputs int he search box
 var movieInput = null;
 
@@ -27,7 +29,7 @@ var formSubmitMovie = function(event) {
                 //pass response data to DOM function
                 console.log(data);
                 //console.log(data.Search);
-                
+                movieTitleSearchEl.value = "";
                 for (i = 0; i < data.Search.length; i++){
                     //displays the image
                     var moviePosterImageEl = document.createElement("img");
@@ -35,24 +37,21 @@ var formSubmitMovie = function(event) {
                     moviePosterImageEl.setAttribute("src", data.Search[i].Poster);
                     moviePosterImageEl.setAttribute("alt", data.Search[i].Title + " movie poster");
 
-                    //link
+                    //creates linklink
                     var moviePosterLinkEl = document.createElement("a");
+                    //makes the link and image
+                    moviePosterLinkEl.setAttribute("href", "./movie-info.html?thisIMDBID=" + data.Search[i].imdbID);
 
-                    var thisMovieID = i;
-
-
-                    moviePosterLinkEl.setAttribute("href", "./movie-info.html?thisIMDBID=" + data.Search[thisMovieID].imdbID);
-
-                    //appends movies to screen.
-                  
+                    //appends movies to list.
+                    imageCaptionEl.textContent = "";
                     moviePosterLinkEl.appendChild(moviePosterImageEl)
                     movieListEl.appendChild(moviePosterLinkEl); 
                     
                 }
                
             }).catch(function(err) {                
-                    alert("Movie not found!");
-                
+                    //alters text if nothing is found.
+                    imageCaptionEl.textContent = "No content found";
             });
         }
     });
