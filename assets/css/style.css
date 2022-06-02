@@ -60,9 +60,9 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-size: cover;
   height: 200px;
   width: 100%;
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
   display: table;
-  background-image: url("/../images/header.webp");
+  background-image: url("../images/header.webp");
   background-size:contain;
 }
 
@@ -113,6 +113,7 @@ align-items: center;
   margin-left: auto;
   margin-right: auto;
   display: flexbox;
+  background-size: cover;
 }
 .footer h3 {
   color: #ddd;
@@ -124,6 +125,13 @@ align-items: center;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
+}
+
+#names-format li {
+  flex:auto;
+  text-align: center;
+  align-items: left;
+  list-style: none;
 }
 
 /* These are for the movie-results page: */
@@ -157,11 +165,6 @@ height: inherit;
   margin-bottom:  200px;
   background-color: black;
   height: inherit;
-  
-  
-
-  
-  
 }
 
 #movie-details h1 {
@@ -179,14 +182,75 @@ height: inherit;
 
 
 /* These are for the favorites page */
-#movie-box {
-   border: 10px solid black;
+
+
+#favorite-movies {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: block;
+  flex-basis: 100%;
+}
+
+#movie-box{
+  display: flex;
+  width: 90%;
+  text-align: center;
+  flex-wrap: wrap;
+  display: block;
+  flex-basis: 100%;
+  border-color: red;
+border-style: dotted solid;
+
+border-top-color: #f439f4;
+border-bottom-color: #f439f4;
+}
+
+#movie-box p {
+  color: white;
+  font-size: 24px;
+  margin: auto;
+}
+
+/* About Us Page */
+.text-box {
+  background: rgba(8, 137, 166, 0.754); 
+  text-align: center;
+  position: relative;
+  padding: 50px;
+  margin: 40px;
+  width: 85%;
+  height: 100%;
+  justify-content: center;
+}
+
+.text-box-head {
+  color: black;
+  padding-bottom: 0.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  text-align: center;
+}
+.text-box-container {
+  background-color: #fff;
+}
+
+.text-box-subhead {
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 
 /* Media Query responsive to mobile phone */
 
 @media screen and  (max-width:550px) {
+
+  
 .pure-menu{
     width: auto;
 }

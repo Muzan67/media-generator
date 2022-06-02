@@ -55,7 +55,7 @@ var fetchMovieData = async (movieID) => {
                 moviePosterEl.setAttribute("src", data.Poster);
                 moviePosterEl.setAttribute("alt", data.Title + " poster");
                 //display title
-                var movieTitleEl = document.createElement("h3");
+                var movieTitleEl = document.createElement("p");
                 movieTitleEl.textContent = data.Title;
                 
                 
