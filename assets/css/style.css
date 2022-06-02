@@ -62,7 +62,7 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
   margin-bottom: 3em;
   display: table;
-  background-image: url(/superhero-generator/assets/images/header.webp);
+  background-image: url("/../images/header.webp");
   background-size:contain;
 }
 
