@@ -1,198 +1,210 @@
 /* Home Page Style Sheet */
 /* Base Style could change something if we need */
 a {
-    text-decoration: none;
-    color: #ddd;
+  text-decoration: none;
+  color: #ddd;
 } 
-body {
-    color: #526066;
-  }
-  
-  h2,
-  h3 {
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  
-  p {
-    line-height: 1.6em;
-  }
-  
-  /* overall layout of the page  */
+img {
+border-color: red;
+border-style: dotted solid;
+margin: 50px;
+border-top-color: #f439f4;
+border-bottom-color: #f439f4;
 
-  .l-content {
-    margin: 0 auto;
-  }
-  
-  .l-box {
-    padding: 0.5em 2em;
-  }
-  
-  /* Menu Bar (we could probably insert media query to the bottom @media...etc) */
-  .pure-menu {
-    background-color: #91a6e9;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  }
-  
-  .pure-menu-link {
-    padding: 0.5em 0.7em;
-  }
-  
-  /* Banner Section Style 
-  (Maybe we could add an image here for aesthetic)  */
-  .banner {
-    background-color: darkblue;
-    text-align: center;
-    background-size: cover;
-    height: 200px;
-    width: 100%;
-    margin-bottom: 3em;
-    display: table;
-    background-image: url("../images/header.webp");
-    background-size:contain;
-  }
-  
-  .banner-head {
-    display: table-cell;
-    vertical-align: middle;
-    margin-bottom: 0;
-    font-size: 2rem;
-    color: #FFD700;
-    font-weight: bold;
-    text-shadow: 0 1px 1px black;
-  }
+}
+main{
+background-color: black;
+}
+
+
+body {
+  color: #526066;
+}
+
+h2,
+h3 {
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+/* overall layout of the page  */
+
+.l-content {
+  margin: 0 auto;
+}
+
+.l-box {
+  padding: 0.5em 2em;
+}
+
+/* Menu Bar (we could probably insert media query to the bottom @media...etc) */
+.pure-menu {
+  background-color: #91a6e9;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pure-menu-link {
+  padding: 0.5em 0.7em;
+}
+
+/* Banner Section Style 
+(Maybe we could add an image here for aesthetic)  */
+.banner {
+  background-color: darkblue;
+  text-align: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 3em;
+  display: table;
+  background-image: url(/superhero-generator/assets/images/header.webp);
+  background-size:contain;
+}
+
+.banner-head {
+  display: table-cell;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 2rem;
+  color: #FFD700;
+  font-weight: bold;
+  text-shadow: 0 1px 1px black;
+}
 
 /* Superhero generator container Is Right Here */
-  
-  .my-container{
-    width: 90%;
-    height: 200px; 
-    margin: 0px auto; 
-    margin-left: auto;
-    margin-right: auto; 
-    font-size: 15px;
-    font-weight: 400;
-    max-width: 100%;
-    max-height:100%;
-    background-size:cover;
-    text-align: center; 
-    color: black; 
-    background-color: hsla(242, 93%, 16%, 0.3);
-    display: flex;
-    justify-content: center;
-  align-items: center;
-  }
 
-  .form-label,
-  #movie-image {
-    letter-spacing: 0.25em;
-    font-weight: 800;
-  }
+.my-container{
+  width: 90%;
+  height: 200px; 
+  margin: 0px auto; 
+  margin-left: auto;
+  margin-right: auto; 
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 100%;
+  max-height:100%;
+  background-size:cover;
+  text-align: center; 
+  color: white; 
+  background-color: hsl(242deg, 100%, 89%, 30%);
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
+
+.form-label,
+#movie-image {
+  letter-spacing: 0.25em;
+  font-weight: 800;
+}
 
 /* Footer Section Lies Here */
 
-  .footer {
-    background: black;
-    width: 98%;
-    height: auto; 
-    margin: 0px auto; 
-    margin-left: auto;
-    margin-right: auto;
-    display: flexbox;
-  }
-  .footer h3 {
-    color: #ddd;
-    text-align: center;
-  }
+.footer {
+  background: black;
+  width: 98%;
+  height: auto; 
+  margin: 0px auto; 
+  margin-left: auto;
+  margin-right: auto;
+  display: flexbox;
+}
+.footer h3 {
+  color: #ddd;
+  text-align: center;
+}
 
 #meet-our-team {
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 /* These are for the movie-results page: */
 #poster-box {
 
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  max-width: 500cm;
-  background-color: black;
-  float:left;
-  height: auto;
-  
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+max-width: 500cm;
+background-color: black;
+float:left;
+height: auto;
+
 
 } 
 #poster-img {
-  height: 15cm;
-  width: 15cm;
-  text-rendering: 200px;
-  height: inherit;
+height: 15cm;
+width: 15cm;
+text-rendering: 200px;
+height: inherit;
 
 
 }
 #movie-details {
-    font-style: bold;
-    font-size: x-large;
-    font-weight: 500;
-    color: white;
-    align-content: flex-start;
-    padding: 200px;
-    margin-bottom:  200px;
-    background-color: black;
-    height: inherit;
-    
-    
+  font-style: bold;
+  font-size: x-large;
+  font-weight: 500;
+  color: white;
+  align-content: flex-start;
+  padding: 200px;
+  margin-bottom:  200px;
+  background-color: black;
+  height: inherit;
+  
+  
 
-    
-    
- }
+  
+  
+}
 
- #movie-details h1 {
-   text-align: center;
-   font-size: x-large;
-   font-weight: 500;
-   text-decoration: underline red;
-   
+#movie-details h1 {
+ text-align: center;
+ font-size: x-large;
+ font-weight: 500;
+ text-decoration: underline red;
+ 
 
- }
+}
 
- #movie-details span {
-     font-style: normal;
- }
+#movie-details span {
+   font-style: normal;
+}
 
 
- /* These are for the favorites page */
- #movie-box {
-     border: 10px solid black;
- }
+/* These are for the favorites page */
+#movie-box {
+   border: 10px solid black;
+}
 
 
 /* Media Query responsive to mobile phone */
 
 @media screen and  (max-width:550px) {
-  .pure-menu{
-      width: auto;
-  }
-  .banner{
-      width: auto;
-  }
-  .my-container {
+.pure-menu{
     width: auto;
-  }
-  .form-label {
-    width: auto;
-  }
-  .footer {
-    width: auto;
-    height: auto;
-  }
-
-  p br {
-    display: none;
 }
+.banner{
+    width: auto;
+}
+.my-container {
+  width: auto;
+}
+.form-label {
+  width: auto;
+}
+.footer {
+  width: auto;
+  height: auto;
 }
 
+p br {
+  display: none;
+}
+}
