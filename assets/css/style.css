@@ -161,6 +161,10 @@ align-items: center;
   padding-left:45%;
 }
 
+#image-caption {
+ letter-spacing:0em !important;
+}
+
 /* These are for the movie-results page: */
 #movie-info {
   display: flexbox;
