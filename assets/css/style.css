@@ -3,6 +3,7 @@
 
 
 
+
 a {
   text-decoration: none;
   color: #ddd;
@@ -10,7 +11,8 @@ a {
 img {
 border-color: red;
 border-style: dotted solid;
-margin: 50px;
+margin: 25px;
+justify-content: space-around;
 border-top-color: #f439f4;
 border-bottom-color: #f439f4;
 
@@ -77,6 +79,7 @@ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   color: #FFD700;
   font-weight: bold;
   text-shadow: 0 1px 1px black;
+  object-fit:cover;
 }
 
 /* Superhero generator container Is Right Here */
@@ -132,7 +135,7 @@ align-items: center;
 
 .footer {
   background-color: black;
-  width: 98%;
+  width: auto;
   height: 200px; 
   margin: 0px auto; 
   margin-left: auto;
@@ -141,6 +144,7 @@ align-items: center;
   text-align: center;
   color: white
 }
+
 .footer h3 {
   color: #ddd;
 
@@ -167,44 +171,42 @@ align-items: center;
 
 /* These are for the movie-results page: */
 #movie-info {
-  display: flexbox;
+  display: flex;
   flex: auto;
   flex-wrap: wrap;
-  display: block;
+  
   background-color: black;
 }
 
 #poster-box {
-  position: absolute;
+  /* position: absolute; */
 margin-left: auto;
 margin-right: auto;
 text-align: center;
 float:left;
 flex: 1 1 auto;
-display: flex;
+display: block;
 
 } 
 #poster-img {
-flex: auto;
-height: 100vh;
-max-width: 200%;
+
+width: 80%;
 }
 
 #movie-details {
+  display: relative;
   flex: auto;
   flex-wrap: wrap;
-  
-  position:relative;
+  /* position:relative; */
   align-items: flex-start;
-  /* display: flex; */
   font-style: bold;
   font-size: x-large;
   font-weight: 500;
   color: white;
   align-content: flex-start;
-  padding: 10% 10% 0 50%;
-  margin-bottom:  200px;
-  height: inherit;
+  padding-top: 10%;
+  /* margin-bottom:  200px; */
+  /* height: inherit; */
   
 }
 
@@ -220,7 +222,7 @@ max-width: 200%;
 #movie-details p {
    font-size:large;
    font-style: bold;
-   color: yellow;
+   color: yellow !important;
 }
 
 #movie-details span {
@@ -230,10 +232,15 @@ max-width: 200%;
 }
 
 #gif-box {
-  padding: 10%;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  flex:wrap;
+  
+}
+
+#gif-box img {
+  max-width: 350px;
+  margin: 5px !important;
 }
 
 /* These are for the favorites page */
@@ -241,23 +248,24 @@ max-width: 200%;
 
 #favorite-movies {
   display: flex;
-  width: 90%;
-  margin: 0 auto;
   flex-wrap: wrap;
-  display: block;
+  flex:auto;
+  width: 90%;
+  margin: auto;
   flex-basis: 100%;
+  text-align: center;
 }
 
 #movie-box{
   display: flex;
-  width: 90%;
+  /* width: 90%; */
   text-align: center;
   flex-wrap: wrap;
-  display: block;
+  display: inline-block;
   flex-basis: 100%;
   border-color: red;
 border-style: dotted solid;
-
+margin: 10px;
 border-top-color: #f439f4;
 border-bottom-color: #f439f4;
 }
@@ -324,10 +332,32 @@ border-bottom-color: #f439f4;
 .pure-menu{
     width: auto;
 }
-.banner{
-    width: auto;
-    
+
+#favorite-movies p {
+  font-size: large;
 }
+
+#movie-info-card a img {
+    align-items: center;
+    margin: 10% !important;
+}
+
+
+#movie-box a img {
+  align-items: center;
+    margin: 5px !important;
+    width: 250px;
+    height: auto;
+}
+
+#remove-movie-button {
+  width: 200px;
+}
+
+#movie-details {
+  display: block;
+}
+
 .my-container {
   width: auto;
 }
@@ -339,7 +369,4 @@ border-bottom-color: #f439f4;
   height: auto;
 }
 
-p br {
-  display: none;
-}
 }

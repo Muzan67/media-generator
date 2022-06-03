@@ -64,6 +64,8 @@ var fetchMovieData = async (movieID) => {
                 var removeMovieButton = document.createElement("button");
                 removeMovieButton.textContent= "Remove " + data.Title + " from Favorites";
                 removeMovieButton.setAttribute("id", movieID);
+                removeMovieButton.setAttribute("id", "remove-movie-button")
+            
                 //removeMovieButton.setAttribute("name", "button" + arrayNumber);
                 
                 //creates linklink
