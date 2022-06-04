@@ -10,6 +10,9 @@ var moviePlotEl = document.querySelector("#movie-plot");
 var movieAwardsEl = document.querySelector("#movie-awards");
 var favoritesButtonEl = document.querySelector("#add-to-favorites");
 var movieInfoBox = document.querySelector("#movie-info");
+var movieBannerEl = document.querySelector("#movie-banner");
+
+
 
 var movieID = null;
 var inFavorites = false;
@@ -47,7 +50,8 @@ var getMovieInfo = function (movieID) {
                 posterImgEl.setAttribute("alt", data.Title + "poster");
 
                 getMovieGifs(data.Title);
-
+                
+                movieBannerEl.textContent=data.Title
                 movieTitleEl.textContent= data.Title;
                 movieTitleText = data.Title
                 movieReleaseEl.textContent = data.Released;
