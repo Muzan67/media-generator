@@ -233,9 +233,10 @@ width: 80%;
 }
 
 #gif-box {
-  padding: 20px;
+  padding: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   
 }
 
@@ -380,6 +381,11 @@ border-bottom-color: #f439f4;
   padding: 25px ;
   
 
+}
+
+#gif-box img {
+  width: 300px;
+  height: auto;
 }
 
 }
