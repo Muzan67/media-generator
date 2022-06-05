@@ -241,7 +241,8 @@ width: 80%;
 }
 
 #gif-box img {
-  max-width: 350px;
+  
+ height:max-content;
   margin: 5px !important;
 }
 
