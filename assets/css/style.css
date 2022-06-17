@@ -359,7 +359,7 @@ border-bottom-color: #f439f4;
     height: auto;
 }
 
-#remove-movie-button {
+.remove-movie-button {
   width: 200px;
 }
 
