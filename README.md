@@ -77,16 +77,16 @@ Have a quality README (with unique name, description, technologies used, screens
 ## Screenshots of the page
 
 1. Media Home Page
-![home page of the website](./assets/img/moderateweather.png)
+![home page of the website](./assets/images/mediaHome.png)
 
-2. Movie Results Page: with movie information
-![Movie information Page on top](./assets/img/moderateweather.png)
+2. Movie Results Page: with movie information and related images
+![Movie information Page on top](./assets/images/resultPage.png)
 
-3. Related Image Section
-![Movie Results Page on the bottom](./assets/img/moderateweather.png)
+3. About our team page
+![Movie Results Page on the bottom](./assets/images/aboutUs.png)
 
 4. Add to favorites Page
-![Add to your favorites page](./assets/img/moderateweather.png)
+![Add to your favorites page](./assets/images/favorites.png)
 
 
 ## Credits and references

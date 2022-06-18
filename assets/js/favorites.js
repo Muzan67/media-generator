@@ -25,6 +25,7 @@ var displayFavorites = function() {
 }
 
 var removeMovie = function (movieID) {
+    
     console.log("remove movie function started")
     for (var i = 0; favoritesArr.length; i++) {
         if (movieID === favoritesArr[i]) {
@@ -64,7 +65,7 @@ var fetchMovieData = async (movieID) => {
                 var removeMovieButton = document.createElement("button");
                 removeMovieButton.textContent= "Remove " + data.Title + " from Favorites";
                 removeMovieButton.setAttribute("id", movieID);
-                removeMovieButton.setAttribute("id", "remove-movie-button")
+                removeMovieButton.classList.add("remove-movie-button")
             
                 //removeMovieButton.setAttribute("name", "button" + arrayNumber);
                 
